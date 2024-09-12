@@ -14,6 +14,8 @@ const NewProducts = () => {
  
 
     return (
+      <>
+      </>
         // <section className="bg-white">
         //     <div className="xl:w-[85%] w-[90%] mx-auto mt-[56px] mb-[69px]">
         //         <h1 className="font-bold text-[#3A3A3A] mb-[32px] text-center lg:text-[30px] lg:leading-10 sm:text-2xl text-lg">New Products</h1>
