@@ -1,16 +1,15 @@
-import React, { FC, useState } from 'react';
+import  { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 
 import shopIcon from '../../assets/images/shoppingCart.svg';
-import heart from '../../assets/images/whiteheart.svg';
-import { ProductTypes } from '../../models/productTypes';
-import { addToCart } from '../../redux/cartActions';
+
+import { addToCart } from '../../redux/cartactions';
 
 interface ProductCardProps {
-  product: ProductTypes;
-  gridClass?: string;
+  product: any;
+  gridClass?: any;
 }
 
 const ProductCard: FC<ProductCardProps> = ({ product, gridClass }) => {

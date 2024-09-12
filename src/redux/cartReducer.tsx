@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
@@ -23,7 +24,7 @@ const initialState: CartState = {
   cartItems: [],
 };
 
-const cartReducer = (state = initialState, action: CartActionTypes): CartState => {
+const cartReducer = (state = initialState, action: any): CartState => {
   switch (action.type) {
     case ADD_TO_CART: {
       const existingItem = state.cartItems.find(item => item.id === action.payload.id);
@@ -45,10 +46,11 @@ const cartReducer = (state = initialState, action: CartActionTypes): CartState =
 
     case REMOVE_FROM_CART: {
       console.log(action);
-      
+      toast.success("Deleted Product Succesfully")
       return {
         ...state,
         cartItems: state.cartItems.filter(item => item.id !== action.payload),
+        
       };
     }
 

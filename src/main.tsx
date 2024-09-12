@@ -6,9 +6,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'; // Imp
 import App from './App.tsx';
 import './index.css';
 
-import Home from './pages/Home.tsx';
-import Cart from './pages/Cart.tsx';
-import store from './redux/store.tsx';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+import store from './redux/store';
 
 // Create a QueryClient instance
 const queryClient = new QueryClient();

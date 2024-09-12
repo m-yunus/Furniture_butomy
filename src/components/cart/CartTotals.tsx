@@ -1,9 +1,9 @@
-import React, { useMemo } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import deleteIcon from '../../assets/images/deleteIcon.svg';
 import { RootState } from '../../redux/store';
-import { emptyCart, removeFromCart } from '../../redux/cartActions';
+import { emptyCart, removeFromCart } from '../../redux/cartactions';
 
 
 
@@ -11,7 +11,7 @@ const CartTotals = () => {
     const dispatch = useDispatch();
 
     const cartItems = useSelector((state: RootState) => state.cart.cartItems); 
-    const { totalQuantity, totalPrice } = useSelector((state: RootState) => state.cart); 
+   
 
 
 
@@ -42,7 +42,7 @@ const CartTotals = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {cartItems.map((item) => (
+                            {cartItems.map((item:any) => (
                                 <tr className='w-full overflow-x-scroll h-[20vh]' key={item.productId}>
                                     <td>
                                         <div className='bg-[#F9F1E7] w-24 h-24 flex items-center justify-center rounded-xl'>
